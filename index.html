@@ -25,8 +25,10 @@
     <h1>Canvas Example</h1>
     <div class = contianer >
         <canvas id="canvas" height= 600 width= 900>
-            
-        </canvas>
+         
+        </canvas><br>
+        <label for="colorWell">Color:</label>
+        <input type="color" value="#ff0000" id="colorWell">  
     </div>
     
 
@@ -133,7 +135,31 @@
             }
         }
 
+        //color picker
+        var colorWell;
+        var defaultColor = "#ff0000";
+
+        window.addEventListener("load", startup, false);
+        function startup() {
+        colorWell = document.querySelector("#colorWell");
+        colorWell.value = defaultColor;
+        colorWell.addEventListener("input", updateFirst, false);
+        
+        colorWell.select();
+        }
+
+        function updateFirst(event) {
         
+        if (color) {
+        color = event.target.value;}
+        console.log("color picke");
+        
+        }
+
+
+        
+    
+
 
     </script>
     
