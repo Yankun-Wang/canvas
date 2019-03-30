@@ -8,8 +8,7 @@
 			border: 1px solid black;
             /*width: 80%;*/
             /*height: 80%;*/
-            max-height: 80%;
-            max-width: 80%
+            
 		}
         .contianer{
             display: flex;
@@ -24,18 +23,19 @@
 <body>
     <h1>Canvas Example</h1>
     <div class = contianer >
-        <canvas id="canvas" height= 600 width= 900>
+        <canvas id="canvas" height= 500 width= 1000>
          
         </canvas><br>
-        <label for="colorWell">Color:</label>
-        <input type="color" value="#ff0000" id="colorWell">  
+        
     </div>
+    <label for="colorWell">Color:</label>
+    <input type="color" value="#ff0000" id="colorWell">  
     
 
     <script>
         var mycanvas = document.getElementById("canvas");
-        //mycanvas.style.width = "80%";
-        //mycanvas.style.height = "80%";
+        mycanvas.style.width = "80%";
+        mycanvas.style.height = "80%";
 
         var ctx = mycanvas.getContext("2d");
         //var Brush = new draw (10 ,"red, 0, 0")
