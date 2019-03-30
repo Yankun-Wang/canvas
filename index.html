@@ -92,7 +92,7 @@
             mycanvas.key = false;
         })
         window.addEventListener("orientationchange", function(e) {
-            clearCanvas();
+            mobileclear()
         });
 
         
@@ -140,7 +140,14 @@
                 //mycanvas.clearRect(0, 0, 900, 600);
             }
         }
-
+        function mobileclear(){
+            
+                radius = 10;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.beginPath();
+          
+            
+        }
         //color picker
         var colorWell;
         var defaultColor = "#ff0000";
