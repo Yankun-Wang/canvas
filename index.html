@@ -74,8 +74,8 @@
         })
 
         window.addEventListener('touchmove', function (e) {
-        x = e.touches[0].offsetX;
-        y = e.touches[0].offsetY;
+        x = e.touches[0].screenX;
+        y = e.touches[0].screenY;
         draw();
         })
         
@@ -130,7 +130,9 @@
         function clearCanvas(){
             if (mycanvas.key && mycanvas.key == 32) {
                 radius = 10;
-                location.reload();
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.beginPath();
+                //location.reload();
                 //mycanvas.clearRect(0, 0, 900, 600);
             }
         }
@@ -144,8 +146,7 @@
         colorWell = document.querySelector("#colorWell");
         colorWell.value = defaultColor;
         colorWell.addEventListener("input", updateFirst, false);
-        
-        colorWell.select();
+        colorWell.select();
         }
 
         function updateFirst(event) {
